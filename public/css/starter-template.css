@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.fixed-box{
+  height:100px;
+
+}
+.profile-pic{
+	height:250px;
+	 width:250px;
+
+}
+#profile-image{
+	text-align:center
+}
+.title{
+	margin-left:15px;
+	margin-bottom:20px;
+}
+.change{
+	margin-left:-50px;
+	margin-top:200px;
+
+}
+.shift{
+	margin-left:-20px;
+}

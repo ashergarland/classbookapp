@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Classbook</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./homepage">My Classes</a></li>
+            <li><a href="./my-profile">My Profile</a></li>
+            <li><a href="./help">Help</a></li>
+             <li><a href="./logout">Sign out</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+ <div class="container">
+	 
+	<!-- Nav Bar Class -->
+
+    <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+       
+      <div class="container-fluid">
+		  
+		 <!-- Classes Header -->
+        <div class="navbar-header">
+         <p class="navbar-text">Academic Timeline</p>
+  
+          
+         
+        </div>
+        
+		<!-- End Classes Header -->
+		
+
+		<!-- End Classes List -->
+      </div>
+    </nav>
+	<!-- End Nav Bar Class -->
+    <div class="input">
+  <input type="text" class="form-control" placeholder="Filter Classes">
+</div><br>
+	<!-- Classes Info Class -->
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
+		
+	  <!-- Content for classes -->
+	  
+	  <!-- End content for classes -->
+	  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#wi14dis">
+           <h4 id="wi14">Winter 2014</h4>
+        </a>
+      </h4>
+     
+    </div>
+    <div id="wi14dis" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="edit-buttons">
+          <div class="btn-group" >
+             <button type="button" class="btn btn-default " id="editToggle"><span class="glyphicon glyphicon-pencil"></span></button> 
+            
+            </div>
+        </div>
+        <br>
+        <table class="table table-hover classes" id="winter2014table">
+          
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Edit
+          </th>
+          {{#each quarters.winter2014}}
+           <tr class ="clickable"> 
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td class="remove">{{section}}</td>
+              <td>  <span class="glyphicon glyphicon-remove"></span></td>      
+           </tr>
+           {{/each}}
+        <div  id ="togglewinter2014" > 
+               <form class="form-horizontal" method="get" role="form" action="./addClass">
+               <tr>
+                <td>
+                <div class="col-sm-10">
+                      <input class="form-control shift" name="classID" placeholder="Course ID">
+                </div>
+                    
+                </td>
+                <td>
+
+                    <div class="col-sm-10">
+                      <input class="form-control shift" name="className" placeholder="Class Name">
+                    </div>
+                </td>
+                <td> 
+
+                    <div class="col-sm-10">
+                      <input class="form-control shift" name="sectionID" placeholder="Section ID">
+                    </div>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary "> Add </button>
+                </td>
+
+                 </tr>
+                 <INPUT TYPE="hidden" NAME="term" VALUE="winter2014">
+                  <INPUT TYPE="hidden" NAME="studentID" VALUE={{id}}>
+              </form>
+        </div>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#fa13dis">
+          <h4 id="fa13">Fall 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="fa13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+        <table class="table table-hover classes">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          {{#each quarters.fall2013}}
+           <tr class ="clickable"> 
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{section}}</td>      
+           </tr>
+           {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#su13dis">
+          <h4 id="su13">Summer 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="su13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-hover classes">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          {{#each quarters.summer2013}}
+           <tr class ="clickable"> 
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{section}}</td>      
+           </tr>
+           {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#sp13dis">
+          <h4 id="sp13">Spring 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="sp13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-hover classes">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          {{#each quarters.spring2013}}
+           <tr class ="clickable"> 
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{section}}</td>      
+           </tr>
+           {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#wi13dis">
+          <h4 id="wi13">Winter 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="wi13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-hover classes">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+           <tr> 
+            <a href="class">
+              <td>CSE 132a</td>
+              <td>Database Systems Applications</td>
+              <td>2649</td>
+            </a>
+           </tr>
+            <tr>
+              <td>CSE 140</td>
+              <td>Components and Design Techniques for Digital Systems</td>
+              <td>8244</td>
+           </tr>
+            <tr>
+              <td>CSE 140L</td>
+              <td>Digital Systems Laboratory</td>
+              <td>9579</td>
+           </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#fa12dis">
+          <h4 id="fa12">Fall 2012</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="fa12dis" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-hover classes">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+           <tr> 
+            <a href="class">
+              <td>CSE 132a</td>
+              <td>Database System Principles</td>
+              <td>7480</td>
+            </a>
+           </tr>
+            <tr>
+              <td>CSE 135</td>
+              <td>Server-side Web Applications</td>
+              <td>9192</td>
+           </tr>
+            <tr>
+              <td>CSE 136</td>
+              <td>Enterprise-class Web Applications</td>
+              <td>1636</td>
+           </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+	<!-- End Classes Info Class -->
+	
+  </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/initializeHome.js"></script>
+
+
+
+</body
+
+</html>
