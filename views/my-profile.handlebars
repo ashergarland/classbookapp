@@ -60,13 +60,14 @@
     <div id="profile-image">
       <img src={{info.imageURL}} class="profile-pic" class="img-rounded">
       <button type="button" class="btn change"><span class="glyphicon glyphicon-pencil"></span></button>
-    </div>
-    <div class="editPhoto"> 
+          <div class="editPhoto"> 
+            <br>
     <form method='post' action='/upload' enctype='multipart/form-data'>
-        <input type='file' name='image'/>
-        <input type='submit' class='btn btn-primary' />
+        <input type='file' name='image'/ class="toggle-picture"> <input type='submit' class='btn btn-primary toggle-picture' />
     </form>
   </div>
+    </div>
+
     
     <div id="profile-information">
       <h4><span class="glyphicon glyphicon-user"></span> Contact</h4>

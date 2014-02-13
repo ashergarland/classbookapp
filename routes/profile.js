@@ -6,10 +6,13 @@ exports.initialize = function(req, res) { 
 	// Your code goes here
 	var data = require('../data.json');
 
-    var studentID = req.session.userID;
-	var myStudentID = req.query.id
-	if(studentID == undefined){
+    var myStudentID = req.session.userID;
+	var studentID = req.query.id;
+	if(myStudentID == undefined){
 		res.render('./index');
+	}
+	if(myStudentID == studentID){
+		res.redirect('my-profile');
 	}
 	var output = {};
 	output.current_classes = [];
