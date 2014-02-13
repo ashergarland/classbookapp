@@ -1,105 +1,107 @@
 {
 	"Students": 
 	[
-		{
-			"id": 0,
-			"firstName": "Asher",
-			"lastName": "Garland",
-			"university": "University of California, San Diego",
-			"email": "amgarlan@ucsd.edu",
-			"password": "group5",
-			"imageURL": "http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg",
-			"quarters": 
-			{
-					"winter2014": 
-					[
-						{
-							"id": "CSE 141",
-							"name": "Introduction to Computer Architecture",
-							"section": "2230"
-						},
-						{
-							"id": "CSE 141L",
-							"name": "Project in Computer Architecture",
-							"section": "6346"
-						},
-						{
-							"id": "CSE 170",
-							"name": "Introduction to Human-Computer Interaction",
-							"section": "9914"
-						},
-						{
-							"id": "CSE 190",
-							"name": "Topics in Computer Science and Engineering",
-							"section": "9234"
-						}
-					],	
-					"fall2013": 
-					[
-						{
-							"id": "CSE 166",
-							"name": "Image Processing",
-							"section": "7326"
-							
-							
-						},
-						{
-							"id": "CSE 131",
-							"name": "Compiler Construction",
-							"section": "2322"
-						
-							
-						},
-						{
-							"id": "CSE 130",
-							"name": "Programming Languages: Principles and Paradigms",
-							"section": "2334"	
-						}
-					],
-					"summer2013": [
+            {
+             "id": 0,
+            "firstName": "Asher",
+            "lastName": "Garland",
+            "university": "University of California, San Diego",
+            "email": "amgarlan@ucsd.edu",
+            "password": "group5",
+            "imageURL": "http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg",
+            "quarters": 
 
-						{
-							"id": "CSE 120",
-							"name": "Principles of Computer Operating Systems",
-							"section": "5493"
-						
-						},
-						{
-							"id": "CSE 123",
-							"name": "Computer Networks",
-							"section": "7087"
-							
-						},
-						{
-							"id": "CSE 105",
-							"name": "Theory of Computability",
-							"section": "9932"
-						
-						}
-					],
-					"spring2013":[		
-						{
-							"id": "CSE 101",
-							"name": "Design and Analysis of Algorithms",
-							"section": "5659"
-						
+                {
+                    "winter2014": 
+                    [
+                        {
+                            "id": "CSE 141",
+                            "name": "Introduction to Computer Architecture",
+                            "section": "2230"
+                        },
+                        {
+                            "id": "CSE 141L",
+                            "name": "Project in Computer Architecture",
+                            "section": "6346"
+                        },
+                        {
+                            "id": "CSE 170",
+                            "name": "Introduction to Human-Computer Interaction",
+                            "section": "9914"
+                        },
+                        {
+                            "id": "CSE 190",
+                            "name": "Topics in Computer Science and Engineering",
+                            "section": "9234"
+                        }
+                    ],  
+                    "fall2013": 
+                    [
+                        {
+                            "id": "CSE 166",
+                            "name": "Image Processing",
+                            "section": "7326"
+                            
+                            
+                        },
+                        {
+                            "id": "CSE 131",
+                            "name": "Compiler Construction",
+                            "section": "2322"
+                        
+                            
+                        },
+                        {
+                            "id": "CSE 130",
+                            "name": "Programming Languages: Principles and Paradigms",
+                            "section": "2334"   
+                        }
+                    ],
+                    "summer2013": [
 
-						},
-						{
-							"id": "CSE 103",
-							"name": "A Practical Introduction to Probability and Statistics",
-							"section": "9282"
-					
+                        {
+                            "id": "CSE 120",
+                            "name": "Principles of Computer Operating Systems",
+                            "section": "5493"
+                        
+                        },
+                        {
+                            "id": "CSE 123",
+                            "name": "Computer Networks",
+                            "section": "7087"
+                            
+                        },
+                        {
+                            "id": "CSE 105",
+                            "name": "Theory of Computability",
+                            "section": "9932"
+                        
+                        }
+                    ],
+                    "spring2013":[      
+                        {
+                            "id": "CSE 101",
+                            "name": "Design and Analysis of Algorithms",
+                            "section": "5659"
+                        
 
-						},
-						{
-							"id": "CSE 118",
-							"name": "Ubiquitous Computing",
-							"section": "2839"
-						}
-					]
-			}
-		},
+                        },
+                        {
+                            "id": "CSE 103",
+                            "name": "A Practical Introduction to Probability and Statistics",
+                            "section": "9282"
+                    
+
+                        },
+                        {
+                            "id": "CSE 118",
+                            "name": "Ubiquitous Computing",
+                            "section": "2839"
+                        }
+                    ]
+                }
+            
+        },
 		{
 			"id": 1,
 			"firstName": "Matan",

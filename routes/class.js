@@ -1,6 +1,10 @@
 
 exports.initialize = function(req, res) {    
 	// Your code goes here
+	var studentID = req.session.userID;
+	if(studentID == undefined){
+		res.render('./index');
+	}
 	var data = require('../data.json');
 	var allClasses = data.Classes;
 	var allUsers = data.Students;

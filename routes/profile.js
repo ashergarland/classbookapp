@@ -8,7 +8,7 @@ exports.initialize = function(req, res) { 
 
     var studentID = req.session.userID;
 	var myStudentID = req.query.id
-	if(!studentID){
+	if(studentID == undefined){
 		res.render('./index');
 	}
 	var output = {};

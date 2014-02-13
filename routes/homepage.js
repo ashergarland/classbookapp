@@ -5,7 +5,7 @@ exports.initialize = function(req, res) { 
 	console.log(req.session.userID);
 	var studentID = req.session.userID;
 	console.log(studentID);
-	if(!req.session.userID || req.session.userID == -1){
+	if(studentID == undefined){
 		res.render('./index');
 	}
 	console.log(req.session.userID);
@@ -25,26 +25,26 @@ exports.addClass = function(req,res) {
 
 	var studentID = req.session.userID;
 
-	if(!studentID){
+	if(studentID == undefined){
 		res.render('./index');
 	}
 
 
-	data.Students[parameters.studentID].quarters[parameters.term].push(newClass);
+	data.Students[studentID].quarters[parameters.term].push(newClass);
 
 	var classAdded = false;
 
 	for (var i = 0; i <data.Classes.length; i++)
 	{
 		if(data.Classes[i].section == parameters.sectionID){
-			data.Classes[i].students.push({"id": parameters.studentID});
+			data.Classes[i].students.push({"id": studentID});
 			classAdded = true;
 
 		}
 
 	}
 	if(!classAdded){
-		newClass.students = [{"id": parameters.studentID}];
+		newClass.students = [{"id": studentID}];
 		data.Classes.push(newClass);
 
 	}		
@@ -52,14 +52,5 @@ exports.addClass = function(req,res) {
 	res.render('homepage',data.Students[studentID]);
 
 } 
-exports.login = function(req,res){
-	var user = req.query;
-	for (var i = 0; i < data.Students.length;i++){
-		if(user.email == data.Students[i].email){
-			req.session.userID = data.Students[i].id;
-			res.render('homepage',data.Students[req.session.userID]);
-		}	
-	}
-	
-	res.render('index');
-}
+
+

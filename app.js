@@ -42,6 +42,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.initialize);
+app.post('/', index.authenticate);
 app.get('/homepage', homepage.initialize);
 app.get('/class', classfile.initialize);
 app.get('/help', help.initialize);
@@ -50,7 +51,6 @@ app.get('/profile', profile.initialize);
 app.get('/my-profile', myprofile.initialize);
 app.get('/addClass', homepage.addClass);
 app.get('/addUser', signup.addUser);
-app.get('/login', homepage.login);
 app.get('/logout', index.logout);
 // Example route
 // app.get('/users', user.list);

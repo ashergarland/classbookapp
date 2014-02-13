@@ -5,7 +5,7 @@ exports.initialize = function(req, res) { 
 	var data = require('../data.json');
 	
 	var studentID = req.session.userID;
-	if(!studentID){
+	if(studentID == undefined){
 		res.render('./index');
 	}
 	var output = {};
