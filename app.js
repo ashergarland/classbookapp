@@ -15,10 +15,14 @@ var help = require('./routes/help');
 var myprofile = require('./routes/my-profile');
 var profile = require('./routes/profile');
 var signup = require('./routes/sign-up');
+
 // Example route
 // var user = require('./routes/user');
 
 var app = express();
+app.configure(function () {
+  app.use(express.bodyParser());
+});
 
 // all environments
 app.set('port', process.env.PORT || 5000);
@@ -52,9 +56,18 @@ app.get('/my-profile', myprofile.initialize);
 app.get('/addClass', homepage.addClass);
 app.get('/addUser', signup.addUser);
 app.get('/logout', index.logout);
-// Example route
-// app.get('/users', user.list);
+
+
+
+
+/// Include the node file module
+
+/// Post files
+app.post('/upload', myprofile.upload)
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+app.listen(8080)

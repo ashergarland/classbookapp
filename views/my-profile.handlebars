@@ -51,11 +51,22 @@
   </nav>
 
   <div id="profile-container">
+<!DOCTYPE HTML><html><body>
+
+
+</body></html>
+
 
     <div id="profile-image">
       <img src={{info.imageURL}} class="profile-pic" class="img-rounded">
       <button type="button" class="btn change"><span class="glyphicon glyphicon-pencil"></span></button>
     </div>
+    <div class="editPhoto"> 
+    <form method='post' action='/upload' enctype='multipart/form-data'>
+        <input type='file' name='image'/>
+        <input type='submit' class='btn btn-primary' />
+    </form>
+  </div>
     
     <div id="profile-information">
       <h4><span class="glyphicon glyphicon-user"></span> Contact</h4>
@@ -151,8 +162,9 @@
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/initializeMyProfile.js"></script>
   
 </body
 

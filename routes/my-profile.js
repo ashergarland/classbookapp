@@ -27,3 +27,31 @@ exports.initialize = function(req, res) { 
 	res.render('my-profile',output);
 
  }
+var fs = require('fs');
+exports.upload = function(req, res) {
+	var userFile = require("../data.json");
+	console.log(req.files);
+
+	fs.readFile(req.files.image.path, function (err, data) {
+
+		var imageName = req.files.image.name
+		var newPath = "./public/uploads/fullsize/" + req.session.userID +".jpg";
+		/// If there's an error
+		if(!imageName){
+
+			console.log("There was an error")
+			res.redirect("/");
+			res.end();
+
+		} else {
+
+		   console.log(newPath);
+		  /// write file to uploads/fullsize folder
+		  fs.writeFile(newPath, data, function (err) {
+		  });
+		  userFile.Students[req.session.userID].imageURL = "uploads/fullsize/" + req.session.userID + ".jpg";
+
+		  res.redirect('my-profile');
+		}
+	});
+}
