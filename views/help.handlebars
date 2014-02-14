@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Course Page</title>
+    <title>Help</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,6 @@
   </head>
 
 <body data-spy="scroll" data-target=".navbar-example">
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -28,12 +27,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+          <a class="navbar-brand" id="home-button" href="./" > Classbook</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./homepage">My Classes</a></li>
-            <li><a href="./my-profile">My Profile</a></li>
+            <li ><a href="./homepage">My Classes</a></li>
+            <li ><a href="./my-profile">My Profile</a></li>
             <li class="active"><a href="./help">Help</a></li>
              <li><a href="./logout">Sign out</a></li>
 
@@ -42,38 +41,73 @@
       </div>
     </div>
  <div class="container">
-
-  <!-- Nav Bar Class -->
-    <nav id="navbar-example2" class="navbar navbar-default " role="navigation">
-
-      <div class="container-fluid">
-      
-     <!-- Classes Header -->
-        <div class="navbar-header">
-         <p class="navbar-text">Help</p>
-        </div>
-        <p class="navbar-text" id="class-title"></p>
-    <!-- End Classes Header -->
-    
-      </div>
-
-    </nav>
-  <!-- End Nav Bar Class -->
+   
+  <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+    <div class="container-fluid">
   
-  <!-- Classes Info Class -->
-    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
-    <!-- Content for classes -->
+      <p class="navbar-text">Help</p>
+  
+    </div>
+  </nav>
 
-      <h2> Help Information Here<h2>
+  <div id="help-container">
+
+    <form class="form-group" action="./help" method="post">
+      
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Full Name</label>
+      <td>
+           <div class="col-sm-10">
+             <input class="form-control" id="inputEmail3" placeholder="Full Name" name="name">
+          </div>
+        </td>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">E-mail</label>
+      <td>
+           <div class="col-sm-10">
+             <input class="form-control" id="inputEmail3" placeholder="E-mail" name="email">
+          </div>
+        </td>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Issue Subject</label>
+      <td>
+           <div class="col-sm-10">
+             <input class="form-control" id="inputEmail3" placeholder="Subject" name="subject">
+          </div>
+        </td>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Issue Details</label>
+      <td>
+           <div class="col-sm-10">
+             <input class="form-control" id="inputEmail3" placeholder="Details" name="details">
+          </div>
+        </td>
+      </div>
+      
+      <div>
+        <br>
+      </div>
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit"> Send for help!</button>
+    </div>
+    </form>
+
   </div>
+
+</div>
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="dist/js/bootstrap.min.js"></script>
-
-
+  <script src="js/my-profile.js"></script>
 </body
 
 </html>

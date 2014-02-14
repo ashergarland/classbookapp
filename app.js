@@ -56,6 +56,8 @@ app.get('/my-profile', myprofile.initialize);
 app.get('/addClass', homepage.addClass);
 app.get('/addUser', signup.addUser);
 app.get('/logout', index.logout);
+app.post('/help', help.mail);
+
 
 
 

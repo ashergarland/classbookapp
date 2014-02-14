@@ -8,9 +8,12 @@ exports.initialize = function(req, res) { 
 
     var myStudentID = req.session.userID;
 	var studentID = req.query.id;
+	console.log(studentID + " " + myStudentID );
 	if(myStudentID == undefined){
-		res.render('./index');
+		console.log(studentID + " " + myStudentID );
+		res.redirect('./');
 	}
+
 	if(myStudentID == studentID){
 		res.redirect('my-profile');
 	}
