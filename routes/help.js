@@ -29,14 +29,18 @@ exports.mail = function (req, res) {
 	);
 	var e = parameters.name + " <contact.classbook@gmail.com>";
 	
-var mailOptions = {
-    from: e, // sender address
-    to: "contact.classbook@gmail.com", // list of receivers
-    subject: parameters.subject, // Subject line
-    text: parameters.details, // plaintext body
-    html: "<b>" + parameters.details + "</b>" // html body
-}
+    var mailOptions = {
+        from: e, // sender address
+        to: "contact.classbook@gmail.com", // list of receivers
+        subject: parameters.subject, // Subject line
+        text: parameters.details, // plaintext body
+        html: "<b>" + parameters.details + "</b>" // html body
+    }
 
-smtpTransport.sendMail(mailOptions, exports.error);
+    smtpTransport.sendMail(mailOptions, exports.error);
+
+    res.render('help', {
+        'sent': true;
+    });
 
 }
