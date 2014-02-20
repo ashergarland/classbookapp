@@ -58,6 +58,7 @@ app.get('/addUser', signup.addUser);
 app.get('/logout', index.logout);
 app.post('/help', help.mail);
 app.get('/removeClass', homepage.removeClass);
+app.get('/updatePassword', myprofile.updatePassword);
 
 
 
