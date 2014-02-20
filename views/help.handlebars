@@ -40,67 +40,41 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
- <div class="container">
+  <div class="container">
    
-  <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
-    <div class="container-fluid">
-  
-      <p class="navbar-text">Help</p>
-  
-    </div>
-  </nav>
+    <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+      <div class="container-fluid">
+    
+        <p class="navbar-text">Help</p>
+    
+      </div>
+    </nav>
 
-  <div id="help-container">
-
-    <form class="form-group" action="./help" method="post">
-      
+    {{#if sent}}
+        <div class="alert .alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Thank you!</strong> Your message will be responded to asap.
+        </div>
+    {{/if}}
+    
+    <form role="form" action="./help" method="post">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Full Name</label>
-      <td>
-           <div class="col-sm-10">
-             <input class="form-control" id="inputEmail3" placeholder="Full Name" name="name">
-          </div>
-        </td>
+        <label for="inputEmail3">Full Name</label>
+        <input type="text" class="form-control" id="inputEmail3" placeholder="Full name" name="name" required>
       </div>
-      
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">E-mail</label>
-      <td>
-           <div class="col-sm-10">
-             <input class="form-control" id="inputEmail3" placeholder="E-mail" name="email">
-          </div>
-        </td>
+        <label for="inputEmail3">E-mail</label>
+        <input type="email" class="form-control" id="inputEmail3" placeholder="E-mail" name="email" required>
       </div>
-      
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Issue Subject</label>
-      <td>
-           <div class="col-sm-10">
-             <input class="form-control" id="inputEmail3" placeholder="Subject" name="subject">
-          </div>
-        </td>
+        <label for="inputEmail3">Issue Details</label>
+        <textarea type="email" class="form-control" id="inputEmail3" placeholder="Details" name="details" required></textarea>
       </div>
-      
-      <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Issue Details</label>
-      <td>
-           <div class="col-sm-10">
-             <input class="form-control" id="inputEmail3" placeholder="Details" name="details">
-          </div>
-        </td>
-      </div>
-      
-      <div>
-        <br>
-      </div>
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit"> Send for help!</button>
-    </div>
+      <button type="submit" class="btn btn-default">Send for help!</button>
     </form>
+    
 
   </div>
-
-</div>
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
