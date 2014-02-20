@@ -4,6 +4,7 @@ $(document).ready(function(event) {
 	//console.log(students);
 
 	$('.classmates tr').click(function() {
+		console.log($(this).attr('id'));
 		goToProfile($(this).attr('id'));
 	});
 
@@ -13,7 +14,7 @@ $(document).ready(function(event) {
 });
 
 function goToProfile(studentId) {
-	window.location.href = "profile?id=" + profile;
+	window.location.href = "profile?id=" + studentId;
 }
 
 // Hides rows that don't contain a match for the name
