@@ -45,27 +45,53 @@
     <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
       <div class="container-fluid">
     
-        <p class="navbar-text">Help</p>
+        <p class="navbar-text">Help Center</p>
     
       </div>
     </nav>
 
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Frequently Asked Questions</h3>
+      </div>
+      <div class="panel-body">
+        <ol>
+          <li>How does Classbook sort students in my class?</li>
+            <p>Classbook uses degrees of seperation to list the students you may have more connections with towards the top of the list, using data from your college and Facebook for example.</p>
+          
+          <li>How do I view mutual classes with another student?</li>
+            <p>To view mutual classes with another student, go to their profile page and select the 'Mutual Classes' tab under Enrolled Classes.</p>
+
+          <li>How do I add or remove a class?</li>
+            <p>Users can edit their schedule, by looking at their schedule on the main page and clicking on the pencil icon at the top right. This then gives the user the ability to add and remove classes.</p>
+          
+          <li>How do I change my profile image?</li>
+            <p>Users can change their profile image by going to their profile, hovering over the image and clicking the pencil icon to upload a new image.</p>
+          
+          <li>How do I change my password?</li>
+            <p>Users can change their password by going to their profile, and entering their password in the change password form</p>
+
+        </ol>
+      </div>
+    </div>
+
     {{#if sent}}
         <div class="alert .alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Thank you!</strong> Your message will be responded to asap.
+          <strong>Thank you!</strong> Your message will be responded to very shortly.
         </div>
     {{/if}}
     
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Contact Us!</h3>
+      </div>
+      <div class="panel-body">
+
     <form role="form" action="./help" method="post">
-      <div class="form-group">
-        <label for="inputEmail3">Full Name</label>
-        <input type="text" class="form-control" id="inputEmail3" placeholder="Full name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="inputEmail3">E-mail</label>
-        <input type="email" class="form-control" id="inputEmail3" placeholder="E-mail" name="email" required>
-      </div>
+
       <div class="form-group">
         <label for="inputEmail3">Subject</label>
         <select type="subject" class="form-control" id="subject" placeholder="Subject" name="subject" required>
@@ -75,7 +101,7 @@
           <option>I have a suggestion</option>
           <option>Other</option>
         </select>
-
+        <br>
         <input type="subject" class="form-control" id="subject" placeholder="Other Subject" name="subject">
 
       </div>
@@ -85,6 +111,8 @@
       </div>
       <button type="submit" class="btn btn-default">Send for help!</button>
     </form>
+
+    </div>
     
 
   </div>
