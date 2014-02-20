@@ -1,4 +1,4 @@
-exports.initialize = function(req, res) {    
+exports.initialize = function(req, res) {   
 	// Your code goes here
 	var data = require("../data.json");
 	if(req.session.userID != undefined){
@@ -7,14 +7,13 @@ exports.initialize = function(req, res) { 
 	}
 	res.render('index');
 
- }
+}
 exports.logout = function(req,res){
 
 	req.session.userID = undefined;
 	console.log(req.session.studentID);
 	res.render('index');
 }
-
 
 exports.authenticate = function(req, res) {
 	var data = require("../data.json");
