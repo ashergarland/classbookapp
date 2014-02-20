@@ -1,10 +1,16 @@
 var data = require("../data.json");
 
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
+
 exports.initialize = function(req, res) {    
 	// Your code goes here
-	console.log(req.session.userID);
+	
 	var studentID = req.session.userID;
-	console.log(studentID);
+
 	if(studentID == undefined){
 		res.render('./index');
 	}
@@ -52,5 +58,51 @@ exports.addClass = function(req,res) {
 	res.render('homepage',data.Students[studentID]);
 
 } 
+
+exports.removeClass = function(req,res) {
+	var parameters = req.query;
+	var removedClass = {
+							"id": parameters.className,
+							"name": parameters.className,
+							"section" : parameters.sectionID
+					};
+	var studentID = req.session.userID;
+	console.log(removedClass);
+	if(studentID == undefined){
+		res.render('./index');
+	}
+	for (var quarterName in data.Students[studentID].quarters){
+		var currentQuarter= data.Students[studentID].quarters[quarterName];
+		//console.log(currentQuarter);
+		for (var curCl = 0; curCl < currentQuarter.length; curCl++){
+			
+			currentClass = currentQuarter[curCl];
+			if(removedClass.section == currentClass.section){
+				console.log("removing" + removedClass);
+				data.Students[studentID].quarters[quarterName].remove(curCl);
+
+				//remove the student from the class
+				for (var curr in data.Classes){
+
+					console.log(data.Classes[curr].section + "  " + removedClass.section);
+					if(data.Classes[curr].section == removedClass.section){
+						for (var i = 0; i< data.Classes[curr].students.length;i++){
+							if(studentID == data.Classes[curr].students[i].id){
+								
+								console.log(data.Classes[curr].students);
+								data.Classes[curr].students.remove(i);
+								console.log(data.Classes[curr].students);
+								return {"result" : "success"};
+							}
+						}
+					}
+				}
+				
+			}
+		}	
+	}
+	return {"result" : "failed"};
+
+}
 
 

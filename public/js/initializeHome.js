@@ -95,3 +95,19 @@ $('#editToggleSpring2013').click(function(){
 	$("#togglespring2013").toggle();	
 
 
+$('.remove').click(function(){
+	var courseName = $(this).parent().find('td').html();
+	var className = $(this).parent().find('td').eq(1).html();
+	var sectionID = $(this).parent().find('td').eq(2).html();
+	$.get('./removeClass?courseName=' + courseName + '&className=' + className + '&sectionID=' + sectionID, removeClass);
+	$(this).parent().remove();
+
+
+
+});
+
+function removeClass(result){
+	console.log("success");
+}
+
+

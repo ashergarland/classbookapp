@@ -16,8 +16,10 @@ exports.initialize = function(req, res) { 
 	
 		if(classData.sectionID == allClasses[i].section){
 			for (var s = 0; s < allClasses[i].students.length;s++){
+
 				for(var a = 0; a < allUsers.length; a++){	
-					if(allClasses[i].students[s].id == allUsers[a].id){
+					console.log(allClasses[i].students[s]);
+					if(allClasses[i].students[s] && allClasses[i].students[s].id == allUsers[a].id){
 						output.students.push(allUsers[a]);
 						break;
 					}
