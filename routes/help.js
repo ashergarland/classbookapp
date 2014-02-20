@@ -40,7 +40,7 @@ exports.mail = function (req, res) {
     smtpTransport.sendMail(mailOptions, exports.error);
 
     res.render('help', {
-        'sent': true;
+        'sent': true
     });
 
 }

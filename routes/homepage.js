@@ -30,7 +30,7 @@ exports.addClass = function(req,res) {
 					};
 
 	var studentID = req.session.userID;
-	
+
 	if(studentID == undefined){
 		res.render('./index');
 	}
@@ -55,7 +55,7 @@ exports.addClass = function(req,res) {
 
 	}		
 	//console.log(data.Students[0].quarters[parameters.term]);
-	return {"result" : "success"};
+	res.json({"result" : "success"});
 
 } 
 
