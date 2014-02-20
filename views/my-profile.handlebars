@@ -56,7 +56,6 @@
 
 </body></html>
 
-
     <div id="profile-image">
       <img src={{info.imageURL}} class="profile-pic" class="img-rounded">
       <button type="button" class="btn change"><span class="glyphicon glyphicon-pencil"></span></button>
@@ -68,10 +67,16 @@
   </div>
     </div>
 
-    
-    <div id="profile-information">
-      <h4><span class="glyphicon glyphicon-user"></span> Contact</h4>
+    <br>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
+  		<li><a href="#enrolledClasses" data-toggle="tab">Enrolled Classes</a></li>
+  		<li><a href="#classHistory" data-toggle="tab">Class History</a></li>
+	</ul>
 
+<div class = "tab-content">	
+    <div class="tab-pane active" id="contact">
+      <h4><span class="glyphicon glyphicon-user"></span> Contact</h4>
       <table class="table">
         <tbody>
           <tr>
@@ -101,9 +106,8 @@
       </table>
     </div>
 
-    <div id="profile-class-current">
+    <div class = "tab-pane" id="enrolledClasses">
       <h4><span class="glyphicon glyphicon-tasks"></span> Enrolled Classes</h4>
-
       <table class="table table-hover classes">
         <thead>
           <th> 
@@ -129,7 +133,7 @@
       </table>
     </div>
 
-    <div id="profile-class-history">
+    <divc class = "tab-pane" id="classHistory">
       <h4><span class="glyphicon glyphicon-time"></span> Class History</h4>
 
       <table class="table table-hover classes">
@@ -157,6 +161,7 @@
     </div>
 
   </div>
+</div>
 
 </div>
 
