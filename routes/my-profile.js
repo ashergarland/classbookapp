@@ -1,6 +1,6 @@
 var data = require("../data.json");
 
-exports.initialize = function(req, res) {    
+exports.initialize = function(req, res) {   
 	// Your code goes here
 	var data = require('../data.json');
 	
@@ -19,15 +19,13 @@ exports.initialize = function(req, res) { 
 				output.previous_classes.push(data.Students[studentID].quarters[current][i]);
 			else
 				output.current_classes.push(data.Students[studentID].quarters[current][i]);
-			
 		}
 	}
-
-	
 	res.render('my-profile',output);
+}
 
- }
 var fs = require('fs');
+
 exports.upload = function(req, res) {
 	var userFile = require("../data.json");
 	console.log(req.files);
@@ -54,4 +52,20 @@ exports.upload = function(req, res) {
 		  res.redirect('my-profile');
 		}
 	});
+}
+
+exports.updatePassword = function(req, res) {
+	var parameters = req.query;
+	var studentID = req.session.userID;
+	var password1 = parameters.password1;
+	var password2 = parameters.password2;
+	//console.log("pw1 " + password1 + " pw 2 " + password2);
+	if(password1 == password2) {
+		data.Students[studentID].password = password1;
+		res.json({"result":"success"});
+	}
+	else {
+		//console.log("not equal");
+		res.json({"result":"failure"});
+	}
 }

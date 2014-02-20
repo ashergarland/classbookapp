@@ -107,6 +107,7 @@ $('.remove').click(function(){
 });
 
 $('.addclass').click(function(){
+	
 	var courseName = $(this).parent().find(".classID").eq(0).val();
 	var className = $(this).parent().find(".className").eq(0).val();
 	var sectionID = $(this).parent().find(".sectionID").eq(0).val(); 
