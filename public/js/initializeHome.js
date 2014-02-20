@@ -149,3 +149,29 @@ function addClass(result){
 	console.log("success");
 }
 
+$(document).ready(function(event) {
+	classes = $('table.AllClasses tbody tr');
+	classes.filter = filterClasses;
+	//console.log(students);
+
+	$('#filter').keyup(function(e) {
+		classes.filter($('#filter').val());
+	});
+});
+function filterClasses(name) {
+	name = name.toLowerCase();
+	this.each(function() {
+		var properties = $(this).find('td');
+		//console.log(properties);
+		var fullname = ($(properties[0]).text() + " " + $(properties[1]).text() + " " + $(properties[2]).text() + " " + $(properties[3]).text()).toLowerCase();
+		if ( fullname.search(name) == -1 ) {
+			
+			$(this).hide();
+		}
+		else {
+
+			$(this).show();
+		}
+	});
+}
+

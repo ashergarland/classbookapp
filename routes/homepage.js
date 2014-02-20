@@ -5,6 +5,10 @@ Array.prototype.remove = function(from, to) {
   this.length = from < 0 ? this.length + from : from;
   return this.push.apply(this, rest);
 };
+function capitalize(s)
+{
+  return s[0].toUpperCase() + s.slice(1);
+}
 
 exports.initialize = function(req, res) {    
 	// Your code goes here
@@ -14,7 +18,21 @@ exports.initialize = function(req, res) { 
 	if(studentID == undefined){
 		res.render('./index');
 	}
-	console.log(req.session.userID);
+
+    data.Students[studentID].allClasses = [];
+    for (var current in data.Students[studentID].quarters){
+
+		for (var i = 0; i < data.Students[studentID].quarters[current].length;i++){
+			    var classEntry = data.Students[studentID].quarters[current][i];
+			    classEntry.quarter = capitalize(current.replace(/([a-z])(?=[0-9])/ig, '$1 '));
+				data.Students[studentID].allClasses.push(classEntry);
+			
+		}
+	}
+	
+
+
+
 	res.render('homepage',data.Students[studentID]);
 
  }

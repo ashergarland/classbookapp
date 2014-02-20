@@ -64,10 +64,17 @@
     </nav>
 	<!-- End Nav Bar Class -->
     <div class="input">
-  <input type="text" class="form-control" placeholder="Filter Classes">
+ 
 </div><br>
 	<!-- Classes Info Class -->
-    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
+
+  <ul class="nav nav-tabs">
+  <li class="active"><a href="#byQuarters" data-toggle="tab">By Quarters</a></li>
+  <li><a href="#allClasses" data-toggle="tab">All </a></li>
+
+  </ul>
+  <div class="tab-content">
+    <div data-spy="scroll" data-target="#navbar-example2"  id="byQuarters" data-offset="0" class="scrollspy-example fixed-box tab-pane active">
 		
 	  <!-- Content for classes -->
 	  
@@ -306,8 +313,36 @@
 
 </div>
     </div>
+
+  <div id="allClasses" class="tab-pane"> 
+    <br>
+     <input type="text" class="form-control" placeholder="Filter Classes" id="filter">
+    <br>
+          <table class="table table-hover AllClasses">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Quarter
+          </th>
+          {{#each allClasses}}
+           <tr> 
+              <td class ="clickable"  >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="clickable"> {{quarter}} </td>    
+           </tr>
+           {{/each}}
+        </table> 
+  </div>  
 	<!-- End Classes Info Class -->
-	
+	</div>
   </div>
 
 
@@ -320,6 +355,6 @@
 
 
 
-</body
+</body>
 
 </html>

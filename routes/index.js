@@ -34,7 +34,7 @@ exports.authenticate = function(req, res) {
 	}
 
 	if ( validated ) {
-		res.render('./homepage',data.Students[req.session.userID]);
+		res.redirect('./homepage');
 	}
 	else {
 		res.render('index', {
