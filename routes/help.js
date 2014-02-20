@@ -42,5 +42,4 @@ exports.mail = function (req, res) {
     res.render('help', {
         'sent': true
     });
-
 }

@@ -116,14 +116,14 @@
 					"winter2014": 
 					[
 						{
-							"id": "CSE 141",
-							"name": "Introduction to Computer Architecture",
-							"section": "2230"
+							"id": "CSE 124",
+							"name": "Networked Services",
+							"section": "2930"
 						},
 						{
-							"id": "CSE 141L",
-							"name": "Project in Computer Architecture",
-							"section": "6346"
+							"id": "CSE 125",
+							"name": "Software System Design and Implementation",
+							"section": "0923"
 						},
 						{
 							"id": "CSE 170",
@@ -216,13 +216,13 @@
 					"winter2014": 
 					[
 						{
-							"id": "CSE 141",
-							"name": "Introduction to Computer Architecture",
-							"section": "2230"
+							"id": "CSE 127",
+							"name": "Introduction to Computer Secuirty",
+							"section": "0293"
 						},
 						{
-							"id": "CSE 141L",
-							"name": "Project in Computer Architecture",
+							"id": "CSE 143",
+							"name": "Microelectronic System Design",
 							"section": "6346"
 						},
 						{
@@ -315,14 +315,14 @@
 					"winter2014": 
 					[
 						{
-							"id": "CSE 141",
-							"name": "Introduction to Computer Architecture",
-							"section": "2230"
+							"id": "COGS 187a",
+							"name": "Usability and Information Architecture",
+							"section": "0192"
 						},
 						{
-							"id": "CSE 141L",
-							"name": "Project in Computer Architecture",
-							"section": "6346"
+							"id": "CSE 199",
+							"name": "Independent Study for Undergraduates",
+							"section": "9230"
 						},
 						{
 							"id": "CSE 170",
@@ -410,15 +410,6 @@
 			"students": [
 				{
 					"id": 0
-				},
-				{
-					"id": 1
-				},
-				{
-					"id": 2
-				},
-				{
-					"id": 3
 				}
 			]
 		},
@@ -429,15 +420,6 @@
 			"students": [
 				{
 					"id": 0
-				},
-				{
-					"id": 1
-				},
-				{
-					"id": 2
-				},
-				{
-					"id": 3
 				}
 			]
 		},
@@ -649,7 +631,68 @@
 					"id": 3
 				}
 			]
+		},
+		{
+			"id": "CSE 124",
+			"name": "Networked Services",
+			"section": "2930",
+			"students": [
+				{
+					"id": 1
+				}
+			]
+		},
+		{
+			"id": "CSE 125",
+			"name": "Software System Design and Implementation",
+			"section": "0923",
+			"students": [
+				{
+					"id": 1
+				}
+			]
+		},
+		{
+			"id": "CSE 127",
+			"name": "Introduction to Computer Secuirty",
+			"section": "0293",
+			"students": [
+				{
+					"id": 2
+				}
+			]
+		},
+		{
+			"id": "CSE 143",
+			"name": "Microelectronic System Design",
+			"section": "6346",
+			"students": [
+				{
+					"id": 2
+				}
+			]
+		},
+		{
+			"id": "COGS 187a",
+			"name": "Usability and Information Architecture",
+			"section": "0192",
+			"students": [
+				{
+					"id": 3
+				}
+			]
+		},
+		{
+			"id": "CSE 199",
+			"name": "Independent Study for Undergraduates",
+			"section": "9230",
+			"students": [
+				{
+					"id": 3
+				}
+			]
 		}
+
 	]
 
 
