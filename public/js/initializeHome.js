@@ -106,8 +106,46 @@ $('.remove').click(function(){
 
 });
 
+$('.addclass').click(function(){
+	var courseName = $(this).parent().find(".classID").eq(0).val();
+	var className = $(this).parent().find(".className").eq(0).val();
+	var sectionID = $(this).parent().find(".sectionID").eq(0).val(); 
+	var term = $(this).parent().find(".term").eq(0).val(); 
+	$(this).parent().find(".className").eq(0).val('');
+	$(this).parent().find(".sectionID").eq(0).val(''); 
+	$(this).parent().find(".classID").eq(0).val('');
+	$.get('./addClass?classID=' + courseName + '&className=' + className + '&sectionID=' + sectionID + '&term=' + term, addClass);
+	var termTable = "#"+ term + "table";
+	var newRow = "<tr><td class ='clickable' >"+ courseName+"</td><td class ='clickable'>"+className+"</td><td class ='clickable'>"+ sectionID  +"</td> <td class='remove'>  <span class='glyphicon glyphicon-remove'></span></td></tr>";
+	console.log(termTable);
+	$(termTable).append(newRow);
+
+	$('.remove').click(function(){
+	var courseName = $(this).parent().find('td').html();
+	var className = $(this).parent().find('td').eq(1).html();
+	var sectionID = $(this).parent().find('td').eq(2).html();
+	$.get('./removeClass?courseName=' + courseName + '&className=' + className + '&sectionID=' + sectionID, removeClass);
+	$(this).parent().remove();
+
+
+
+	});
+	$('.clickable').click(function() {
+	var courseName = $(this).parent().find('td').html();
+	var className = $(this).parent().find('td').eq(1).html();
+	var sectionID = $(this).parent().find('td').eq(2).html();
+	window.location.href = "class?courseName=" + courseName + "&className=" + className 
+	+ "&sectionID=" + sectionID;
+	});
+
+
+});
+
 function removeClass(result){
 	console.log("success");
 }
 
+function addClass(result){
+	console.log("success");
+}
 
