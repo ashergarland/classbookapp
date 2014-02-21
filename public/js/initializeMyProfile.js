@@ -1,4 +1,6 @@
 $(".editPhoto").hide();
+$(".togglename").hide();
+$(".toggleemail").hide();
 
 $(".change").click(function() {
 	$(".editPhoto").toggle();
@@ -20,6 +22,28 @@ $('.updatePassword').click(function() {
 	
 });
 
+
+$('.updateName').click(function() {
+	var fName = $("#firstNameForm").eq(0).val();
+	var lName = $("#lastNameForm").eq(0).val();
+	console.log(password1 );
+	$.get('./updateName?firstName=' + fName + "&lastName=" + lName, updateName);
+	
+});
+
+
 function updatePassword(result){
 	console.log(result);
 }
+
+function updateName(result){
+	console.log(result);
+}
+
+$('#editToggleName').click(function(){	
+	$(".togglename").toggle();
+});
+
+$('#editToggleEmail').click(function(){	
+	$(".toggleemail").toggle();
+});

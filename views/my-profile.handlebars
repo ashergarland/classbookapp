@@ -58,7 +58,7 @@
 
     <div id="profile-image">
       <img src={{info.imageURL}} class="profile-pic" class="img-rounded">
-      <button type="button" class="btn change"><span class="glyphicon glyphicon-pencil"></span></button>
+      <button type="button" class="btn btn-primary change"><span class="glyphicon glyphicon-pencil"></span></button>
           <div class="editPhoto"> 
             <br>
     <form method='post' action='/upload' enctype='multipart/form-data'>
@@ -81,17 +81,47 @@
         <tbody>
           <tr>
             <td>Name</td>
-            <td id="profile-name"> {{info.firstName}} {{info.lastName}}</td>
-            <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+            <td id="profile-name"> {{info.firstName}} {{info.lastName}}
+			
+		  
+	            <div class ="togglename"> 
+	                 <div class="form-horizontal">
+	                        <label class="control-label"> Update Name: </label>
+	                        <input class="form-control firstNameForm" placeholder="First Name">
+							<input class="form-control lastNameForm" placeholder="Last Name">
+	                        <button class="btn btn-primary btn-block addclass"> Update </button><br>
+	                   <INPUT TYPE="hidden" class="term" VALUE="updateName">
+	                </div>
+	          </div>
+			
+			
+			</td>
+            <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" id="editToggleName"></span></button> </td>
           </tr>
+		
+		
           <tr>
             <td>Email</td>
-            <td id="profile-email">{{info.email}}</td>
-            <td> <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button></td>
+            <td id="profile-email">{{info.email}}
+			
+	            <div class ="toggleemail" > 
+	                 <div class="form-horizontal">
+	                        <label class="control-label"> Update E-mail: </label>
+	                        <input class="form-control updateEmailForm" placeholder="E-mail">
+							
+	                        <button class="btn btn-primary btn-block addclass"> Update </button><br>
+	                   <INPUT TYPE="hidden" class="term" VALUE="updateEmail">
+	                </div>
+	          </div>
+			</td>
+            <td> <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" id="editToggleEmail"></span></button></td>
           </tr>
+		  
+
+		  
           <tr>
             <td>Change Password</td>
-            <td >
+            <td>
              <div class="form-group">
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               <br>
